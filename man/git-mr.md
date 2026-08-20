@@ -16,13 +16,17 @@ git-mr(1) -- Checks out a merge request locally
 
   &lt;remote&gt;
 
-  The name of the remote to fetch from. Defaults to `origin`.
+  The name of the remote to fetch from (overwrites the configured one).
 
   &lt;url&gt;
 
   GitLab merge request URL in the format
   `https://gitlab.tld/owner/repository/merge_requests/453`.
 
+## CONFIGURATION
+
+  Default remote is read from the `git-extras.mr.remote` entry. The fallback
+  is `origin`.
 
 ## EXAMPLES
 

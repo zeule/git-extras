@@ -17,7 +17,7 @@ elif [[ $1 =~ ^(https?://[^/]+/(.+))/merge_requests/([0-9]+).*$ ]]; then
   id=${BASH_REMATCH[3]}
 else
   id=$1
-  remote=${2:-origin}
+  remote=${2:-$(git config get --default=origin git-extras.mr.remote)}
 fi
 
 branch=mr/$id

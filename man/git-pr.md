@@ -17,7 +17,7 @@ git-pr(1) -- Checks out a pull request locally
 
   &lt;remote&gt;
 
-  The name of the remote to fetch from. Defaults to `origin`.
+  The name of the remote to fetch from (overwrites the configured one).
 
   &lt;url&gt;
 
@@ -30,6 +30,11 @@ git-pr(1) -- Checks out a pull request locally
   request's mergeability, it only works with the opened pull request. If the merge
   commit is not up-to-date, please visit the pull request web page to trigger the
   rebuild.
+
+## CONFIGURATION
+
+  Default remote is read from the `git-extras.pr.remote` entry. The fallback
+  is `origin`.
 
 ## EXAMPLES
 
